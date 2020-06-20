@@ -83,7 +83,7 @@ bool survey_sort(FILE* fp1, FILE* fp2) {
 			fwrite(course[i].student[j], 1, strlen(course[i].student[j]), fp2);
 			fputs(", ", fp2);
 		}
-		fwrite(course[i].student[course[i].number], 1, strlen(course[i].student[j]), fp2);
+		fwrite(course[i].student[course[i].number], 1, strlen(course[i].student[course[i].number - 1]), fp2);
 		fputs("\n", fp2);
 	}
 }
