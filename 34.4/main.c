@@ -61,23 +61,41 @@ void free_tree(Node* node) {
 
 Node* create_test_tree() {
 	Node* root = malloc(sizeof(Node));
+	if (root == NULL) {
+		return NULL;
+	}
 	root->data = 50;
 	Node* node1 = malloc(sizeof(Node));
+	if (node1 == NULL) {
+		return NULL;
+	}
 	node1->data = 20;
 	root->left = node1;
 	Node* node2 = malloc(sizeof(Node));
+	if (node2 == NULL) {
+		return NULL;
+	}
 	node2->data = 30;
 	root->right = node2;
 	node2->left = NULL;
 	Node* node4 = malloc(sizeof(Node));
+	if (node4 == NULL) {
+		return NULL;
+	}
 	node4->data = 70;
 	node1->left = node4;
 	Node* node5 = malloc(sizeof(Node));
+	if (node5 == NULL) {
+		return NULL;
+	}
 	node5->data = 900;
 	node1->right = node5;
 	node4->right = node4->left = NULL;
 	node5->right = node5->left = NULL;
 	Node* node6 = malloc(sizeof(Node));
+	if (node6 == NULL) {
+		return NULL;
+	}
 	node6->data = 1000;
 	node2->right = node6;
 	node6->right = node6->left = NULL;
