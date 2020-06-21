@@ -23,6 +23,10 @@ int add_time(Time* time, int add) {
 
 int main() {
 	Time* time = malloc(sizeof(Time));
+	if (time == NULL) {
+		printf("memory error\n");
+		return 1;
+	}
 	time->h = 15;
 	time->min = 30;
 	time->sec = 23;
