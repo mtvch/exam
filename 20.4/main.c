@@ -29,8 +29,8 @@ List* create_node() {
 		printf("memory error\n");
 		return NULL;
 	}
-	//node->data = 0;
-	//node->next = NULL;
+	node->data = 0;
+	node->next = NULL;
 	return node;
 }
 
